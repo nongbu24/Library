@@ -1,0 +1,9 @@
+package com.samsam.books.service;
+
+import java.util.List;
+
+import com.samsam.books.dto.BooksDTO;
+
+public interface ApiService {
+	public List<BooksDTO> getBooksList();
+}

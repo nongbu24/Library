@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.samsam.books.mapper.BooksMapper">
+
+    <!--
+    주어진 Books 객체를 BOOKS 테이블에 삽입하는 SQL 쿼리
+    MyBatis의 #{} 문법을 사용하여 메서드 파라미터와 연결
+    -->
+    <insert id="insertBooksInfo" parameterType="com.samsam.books.model.Books">
+        INSERT INTO BOOKS (bookImageURL, bookname, authors, publisher, publicationYear, callNum, className, isbn13)
+        VALUES (#{bookImageURL}, #{bookname}, #{authors}, #{publisher}, #{publicationYear}, #{callNum}, #{className}, #{isbn13})
+    </insert>
+
+</mapper>

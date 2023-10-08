@@ -1,0 +1,5 @@
+package com.samsam.books.config;
+
+public class MybatisConfig {
+
+}

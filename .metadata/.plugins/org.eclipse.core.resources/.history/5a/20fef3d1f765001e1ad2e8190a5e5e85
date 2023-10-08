@@ -1,0 +1,26 @@
+package com.samsam.books.controller;
+
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.samsam.books.dto.BooksDTO;
+import com.samsam.books.service.ApiService;
+
+@Controller
+public class ApiController {
+	
+	private final ApiService apiService;
+	
+	@GetMapping(value = "/")
+	public Object test() {
+		return "Hello World";
+	}
+	
+	@GetMapping(value = "/book")
+	public List<BooksDTO> getBook() {
+		return apiService.getBookList();
+	}
+	
+}

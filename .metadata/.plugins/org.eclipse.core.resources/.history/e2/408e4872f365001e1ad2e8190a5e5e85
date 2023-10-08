@@ -1,0 +1,12 @@
+package com.samsam.books.mapper;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import com.samsam.books.dto.BooksDTO;
+
+@Mapper
+public class BooksMapper {
+	List<BooksDTO> getBookList();
+}

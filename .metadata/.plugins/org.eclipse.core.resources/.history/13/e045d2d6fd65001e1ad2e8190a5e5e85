@@ -1,0 +1,5 @@
+package com.samsam.books.controller;
+
+public class ApiController {
+
+}

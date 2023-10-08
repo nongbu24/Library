@@ -1,0 +1,23 @@
+package com.samsam.books.controller;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.samsam.books.dto.BooksDTO;
+import com.samsam.books.mapper.BooksMapper;
+
+@RestController
+public class BooksController {
+	private BooksMapper mapper;
+	
+	public BooksController(BooksMapper mapper) {
+		this.mapper = mapper;
+	}
+	
+	@PostMapping(value = "/books")
+	public void insertBookInfo(@RequestBody BooksDTO booksDTO) {
+		mapper.insertBookInfo(booksDTO.getBookImageURL(), booksDTO.getBookname(), booksDTO.getAuthors(), booksDTO.getPublisher(), booksDTO.getPublicationYear(), booksDTO.getCallNum(), booksDTO.getClassName(), booksDTO.getIsbn13());
+	}
+	
+}

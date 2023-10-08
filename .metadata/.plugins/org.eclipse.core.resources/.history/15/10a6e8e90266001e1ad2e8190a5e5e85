@@ -1,0 +1,18 @@
+package com.samsam.books.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.samsam.books.dto.BooksDTO;
+
+@Service
+public class ApiServiceImpl implements ApiService {
+	private final ApiMapper apiMapper;
+	
+	@Override
+	public List<BooksDTO> getBooksList() {
+		return ApiMapper.getBooksList();
+	}
+
+}

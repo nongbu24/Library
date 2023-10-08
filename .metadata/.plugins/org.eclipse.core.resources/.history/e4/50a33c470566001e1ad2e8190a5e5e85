@@ -1,0 +1,9 @@
+package com.samsam.books.controller;
+
+public class ApiController {
+	public final String url = "http://data4library.kr/api/itemSrch?authKey=558b4cc6e2673dcc61479b28615e9f5b9ec00805e4a41e40c1879cb038a806e4&libCode=141321&type=ALL&pageNo=1&pageSize=100&format=json";
+	
+	
+	
+	
+}
